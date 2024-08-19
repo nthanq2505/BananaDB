@@ -9,10 +9,9 @@ function handleNotFound(req, res) {
 function router(req, res) {
     const url = req.url;
     const method = req.method;
-    console.log(url, method)
     if (url === '/api/create' && method === 'POST') {
         controller.handleCreate(req, res);
-    } else if (url === '/api/read' && method === 'GET') {
+    } else if (url === '/api/read' && method === 'POST') {
         controller.handleRead(req, res);
     } else if (url === '/api/update' && method === 'PUT') {
         controller.handleUpdate(req, res);
