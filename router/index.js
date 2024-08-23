@@ -9,6 +9,7 @@ function handleNotFound(req, res) {
 function router(req, res) {
     const url = req.url;
     const method = req.method;
+
     if (url === '/api/create' && method === 'POST') {
         controller.handleCreate(req, res);
     } else if (url === '/api/read' && method === 'POST') {
